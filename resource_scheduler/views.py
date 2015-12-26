@@ -10,3 +10,9 @@ def allresources(request):
 		"resources": Resource.objects.all()
 	}
 	return render_to_response("resources_main.html", mdict)
+
+def specificresource(request, resource_pk):
+	mdict = {
+		"resource": Resource.objects.get(pk=resource_pk)
+	}
+	return render_to_response("resource.html", mdict)
