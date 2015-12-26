@@ -6,4 +6,5 @@ urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^resources/$', views.allresources, name='resources_main'),
     url(r'^resources/(?P<resource_pk>\d*)$', views.specificresource, name='resource'),
+    url(r'^resources/new$', views.newresource, name='new_resource'),
 ]
