@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block body %}
+<h1>List of reservations</h1>
+<ul>
+{% for reservation in reservations %}
+	<li><a href="{% url 'reservation' reservation.pk %}">{{ reservation.resource }} for {{ reservation.user }} ({{ reservation.priority }}) @ {{ reservation.reservation_start }}</a></li>
+{% endfor %}
+</ul>
+{% endblock %}

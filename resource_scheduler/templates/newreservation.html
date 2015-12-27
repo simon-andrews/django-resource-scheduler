@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block body %}
+<table class="table">
+<form action="{% url 'new_reservation' %}" method="post">
+    {% csrf_token %}
+    {{ form.as_table }}
+    <tr><td colspan=2><input type="submit" value="Submit" /></td></tr>
+</form>
+</table>
+{% endblock %}
